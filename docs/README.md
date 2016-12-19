@@ -5,6 +5,8 @@ noted, so please use that for any gaps provided here and assume defaults.
 
 ## Format
 
+You can find all docs stored in `/v<API_VERSION>`.
+
 All docs must be written in [Markdown](<link>), you can see the structure below:
 
 ```md

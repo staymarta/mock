@@ -1,0 +1,48 @@
+# StayMarta API
+
+**v1**
+
+## Authentication
+
+![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
+
+OAuth 2.0
+
+Supported Providers:
+
+  * Facebook
+  * Username and password
+
+
+## Standard Format
+
+![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
+
+
+### Basic metadata
+
+All responses have a `metadata` field, this field returns some basic information:
+
+```js
+{
+  "metadata": {
+    "server_time": "1482189604",             // Server's unix timestamp.
+    "container":   "2232ccedee22232rfdfefwe" // Container ID that dished the response.
+  }
+}
+```
+
+### Data Pagination
+
+All data returning endpoints return in paginated format, and follow this structure
+
+```js
+{
+  "metadata": {
+    "pages": 2,     // returns a relative amount of pages based on per page.
+    "per_page": 1,  // amount of entries on a page.
+    "entries": 2    // total amount of entries returned.
+  },
+  // data, i.e for listings, "listings"
+}
+```
