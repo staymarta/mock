@@ -1,5 +1,7 @@
 # /listing endpoint
 
+![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
+
 This endpoint returns listings. All data returning endpoints are paginated.
 
 ## GET /

@@ -2,6 +2,8 @@
 
 **v1**
 
+Written & maintained by [Jared Allard &lt;jaredallard@outlook.com&gt;](https://jaredallard.me)
+
 ## Authentication
 
 ![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
@@ -12,6 +14,9 @@ Supported Providers:
 
   * Facebook
   * Username and password
+
+
+[An introduction to OAuth 2.0](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
 
 ## Standard Format
