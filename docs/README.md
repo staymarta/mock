@@ -10,10 +10,35 @@ All docs must be written in [Markdown](<link>), you can see the structure below:
 ```md
 # ENDPOINT
 
+[ENDPOINT BADGES]
+
 DESCRIPTION OF ENDPOINT
 
-[AUTHENTICATION REQUIRED BADGE?]
+## /METHOD
+
+[METHOD SPECIFIC BADGES]
+
+DESCRIPTION OF ENDPOINT
+
+IF BODY
+
+* paramater - what it does
+
+*REQUEST DATA SAMPLE*
+
+IF RETURNS
+
+*RESPONSE DATA SAMPLE*
+
 ```
+
+For all response and request data, you must wrap it in 3 back ticks like so:
+
+\`\`\`
+
+code
+
+\`\`\`
 
 ## Testing
 
@@ -21,7 +46,7 @@ All markdown files must pass the [write-good]() linter. There are
 available plugins for the editor [Atom](https://atom.io), such as,
 [atom-write-good-linter](<linter-plugin-here).
 
-Otherwise run, in a command line:
+Otherwise run in an interactive shell:
 
 ```bash
 
@@ -34,14 +59,10 @@ Badges help us convoy information visually and textually, we use them to make ou
 documentation more visual and less boring to read through.
 
 
-## Implementation
-
-![required:true](https://img.shields.io/badge/required-true-green.svg?style=flat-square)
-
-This badge details if a component is implemented.
-
 ### Not Implemented
 
+Use this badge when a endpoint or it's method isn't implemented.
+
 ![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
 
 **Markdown**
@@ -51,23 +72,15 @@ This badge details if a component is implemented.
 ![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
 ```
 
-**Link**
+## Authenticated
 
-https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square
+Use this badge when a endpoint or it's method isn't implemented.
 
----
-
-### Implemented
-
-![status:implemented](https://img.shields.io/badge/status-implemented-green.svg?style=flat-square)
+![authenticated:true](https://img.shields.io/badge/authenticated-true-green.svg?style=flat-square)
 
 **Markdown**
 
 ```md
 
-![status:implemented](https://img.shields.io/badge/status-implemented-green.svg?style=flat-square)
+![authenticated:true](https://img.shields.io/badge/authenticated-true-green.svg?style=flat-square)
 ```
-
-**Link**
-
-https://img.shields.io/badge/status-implemented-green.svg?style=flat-square
