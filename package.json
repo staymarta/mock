@@ -6,6 +6,8 @@
   "author": "Jared Allard <jaredallard@outlook.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2"
   }
 }
