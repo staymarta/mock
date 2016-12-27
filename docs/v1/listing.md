@@ -10,7 +10,7 @@ Get a listing.
 
 Filtering:
 
-* `?listing-id`
+* `?id=listing-id`
 * `/:listing-id`
 
 Params:
