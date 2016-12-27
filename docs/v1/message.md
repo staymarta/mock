@@ -58,27 +58,7 @@ Example Post:
 
 Example Response:
 
-```js
-{
-  "id": "1392109843029",
-  "sent-by": {                // /user information
-
-  },
-  "received-by": {            // /user information
-
-  },
-  "info": {
-    "has_listing": true,      // is this message about a listing
-    "listing": "<id>",        // appears if has_listing is true, about listing id
-    "subject": "sample message subject",
-    "created": "2016-12-27T03:59:36+00:00"
-  },
-  "message": {
-    "text": "hello, world!",
-    "html": "<b>hello, world!</b>"
-  }
-}
-```
+See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-)
 
 ## PUT /
 
@@ -92,8 +72,12 @@ Example Post:
 
 ```js
 {
-  "message": "hello, world", // markdown represented text. Make sure to encode correctly.
+  "message": "hello, world", // markdown represented text.
   /* optional */
   "listing": "<listing-id>"  // change listing it concerns.
 }
 ```
+
+Example Response:
+
+See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-)
