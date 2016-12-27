@@ -6,14 +6,24 @@ Send messages to a user, and get messages.
 
 ## GET /
 
+Return all messages
+
+Example:
+
+```js
+/* pagination head */
+[
+  <message>,
+  <message>
+]
+/* pagination end */
+```
+
+## GET /:message-id
+
 ![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
 
 Get a message by id.
-
-Filtering:
-
-* `?id=message-id`
-* `/:message-id`
 
 Example Response:
 
@@ -34,7 +44,7 @@ Example Response:
   },
   "message": {
     "text": "hello, world!",
-    "html": "<b>hello, world!</b>"
+    "html": "<b>hello, world!</b>" // processed markdown
   }
 }
 ```
