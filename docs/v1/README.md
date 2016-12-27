@@ -48,6 +48,19 @@ All data returning endpoints return in paginated format, and follow this structu
     "per_page": 1,  // amount of entries on a page.
     "entries": 2    // total amount of entries returned.
   },
-  // data, i.e for listings, "listings"
+  "data": []        // array of data.
+}
+```
+
+### Errors
+
+This is available when an error has occurred.
+
+```js
+{
+  "error": {
+    "message": "Helpful User Friendly Error Message",
+    "code":    "ERRCODE"
+  }
 }
 ```

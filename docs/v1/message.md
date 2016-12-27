@@ -6,6 +6,8 @@ Send messages to a user, and get messages.
 
 ## GET /
 
+![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
+
 Return all messages
 
 Example:
@@ -68,7 +70,7 @@ Example Post:
 
 Example Response:
 
-See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-)
+See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-message-id)
 
 ## PUT /
 
@@ -90,4 +92,4 @@ Example Post:
 
 Example Response:
 
-See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-)
+See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-message-id)

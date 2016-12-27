@@ -6,12 +6,27 @@ This endpoint returns listings. All data returning endpoints are paginated.
 
 ## GET /
 
+Get a paginated list of all the now available listings. Defaults to `10`.
+
+Example response
+
+```js
+// ?per_page=50
+{
+  "metadata": {
+    "pages": 2,      // returns a relative amount of pages based on per page.
+    "per_page": 1    // amount of entries on a page.
+    "listings": 2    // total amount of listings.
+  },
+  "listings": [
+    /* listing */
+  ]
+}
+```
+
+## GET /:listing-id
+
 Get a listing.
-
-Filtering:
-
-* `?id=listing-id`
-* `/:listing-id`
 
 Params:
 
@@ -144,25 +159,4 @@ Example response
 
 ```js
 /* listing object */
-```
-
-
-## GET /all
-
-Get a paginated list of all the now available listings. Defaults to `10`.
-
-Example response
-
-```js
-// ?per_page=50
-{
-  "metadata": {
-    "pages": 2,      // returns a relative amount of pages based on per page.
-    "per_page": 1    // amount of entries on a page.
-    "listings": 2    // total amount of listings.
-  },
-  "listings": [
-    /* listing */
-  ]
-}
 ```

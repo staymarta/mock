@@ -15,6 +15,22 @@ const debug   = require('./lib/logger.js')('bootstrap')
 
 let app = express();
 
+app.use((req, res, next) => {
+
+  res.paginate = data => {
+    return res.send({
+      metadata: {
+        pages: data.length,
+        per_page: 1,
+        length: data.length
+      },
+      data: data
+    })
+  };
+
+  return next();
+})
+
 const ROUTE_DIR = path.join(__dirname, 'versions');
 async.waterfall([
   /**
