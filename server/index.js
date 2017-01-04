@@ -8,6 +8,7 @@
 'use strict';
 
 const express = require('express');
+const bodyp   = require('body-parser');
 const async   = require('async');
 const path    = require('path');
 const fs      = require('fs');
@@ -15,7 +16,19 @@ const debug   = require('./lib/logger.js')('bootstrap')
 
 let app = express();
 
+/**
+ * Built In API helpers.
+ **/
 app.use((req, res, next) => {
+
+  res.error = (desc, code) => {
+    return res.send({
+      error: {
+        message: desc,
+        code: code
+      }
+    })
+  };
 
   res.paginate = data => {
     return res.send({
@@ -30,6 +43,8 @@ app.use((req, res, next) => {
 
   return next();
 })
+
+app.use(bodyp.json())
 
 const ROUTE_DIR = path.join(__dirname, 'versions');
 async.waterfall([

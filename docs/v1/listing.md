@@ -1,7 +1,5 @@
 # /listing endpoint
 
-![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
-
 This endpoint returns listings. All data returning endpoints are paginated.
 
 ## GET /
@@ -126,15 +124,11 @@ Example response
 /* listing object */
 ```
 
-## PUT /
+## PUT /:id
 
 Update a listing.
 
 Filtering:
-
-* `?listing-id`
-* `/:listing-id`
-* `JSON.listing`
 
 Example Response
 
@@ -142,14 +136,9 @@ Example Response
 /* listing object updated */
 ```
 
-## DELETE /
+## DELETE /:id
 
 Deletes a listing and then returns the deleted listing.
-
-Filtering:
-
-* `?listing-id`
-* `/:listing-id`
 
 **NOTE**: While supplying data in a delete isn't technically
 against the RFC, we avoid it to make sure there are no issues in case

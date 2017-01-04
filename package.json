@@ -1,13 +1,11 @@
 {
   "name": "mock",
-  "version": "1.0.0",
-  "description": "Mock Data Server for StayMarta",
-  "main": "index.js",
-  "author": "Jared Allard <jaredallard@outlook.com>",
-  "license": "MIT",
+  "description": "mock data server (INTERNAL)",
+  "license": "BSD-3-Clause",
   "dependencies": {
-    "express": "^4.14.0",
-    "gulp": "^3.9.1",
-    "gulp-cli": "^1.2.2"
+    "async": "^2.1.4",
+    "body-parser": "^1.15.2",
+    "debug": "^2.5.1",
+    "express": "^4.14.0"
   }
 }

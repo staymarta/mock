@@ -76,7 +76,7 @@ Use this badge when a endpoint or it's method isn't implemented.
 
 ## Authenticated
 
-Use this badge when a endpoint or it's method isn't implemented.
+Use this badge when authentication is required to access an endpoint.
 
 ![authenticated:true](https://img.shields.io/badge/authenticated-true-green.svg?style=flat-square)
 

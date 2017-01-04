@@ -1,12 +1,8 @@
 # /message endpoint
 
-![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
-
 Send messages to a user, and get messages.
 
 ## GET /
-
-![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
 
 Return all messages
 
@@ -23,7 +19,6 @@ Example:
 
 ## GET /:message-id
 
-![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
 
 Get a message by id.
 
@@ -53,8 +48,6 @@ Example Response:
 
 ## POST /
 
-![status:not-implemented](https://img.shields.io/badge/status-not--implemented-red.svg?style=flat-square)
-
 Create a messages
 
 Example Post:
@@ -63,6 +56,7 @@ Example Post:
 {
   "to": "<user-id>",         // to user id
   "message": "hello, world", // markdown represented text.
+  "subject": "simple subject",
   /* optional */
   "listing": "<listing-id>"  // listing it's about
 }
@@ -72,24 +66,50 @@ Example Response:
 
 See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-message-id)
 
-## PUT /
+## PUT /:message-id
 
 Edit a message
-
-Filters:
-
-* `/:message-id`
 
 Example Post:
 
 ```js
 {
-  "message": "hello, world", // markdown represented text.
+  "message": "hello, world",    // markdown represented text.
+  "subject": "updated subject",
   /* optional */
-  "listing": "<listing-id>"  // change listing it concerns.
+  "listing": "<listing-id>"     // change listing it concerns.
 }
 ```
 
 Example Response:
 
 See [GET / response](https://github.com/staymarta/mock/blob/master/docs/v1/message.md#get-message-id)
+
+
+## DELETE /:id
+
+Delete a message by id.
+
+Example Response:
+
+```js
+{
+  "id": "5ed86a052ed381acb4c78beae6e606600ff5bfc0",
+  "sent-by": {
+    "todo": true
+  },
+  "received-by": {
+    "todo": true
+  },
+  "info": {
+    "has_listing": false,
+    "listing": null,
+    "subject": "Hello, world!",
+    "created": "2017-01-04T19:50:10.335Z"
+  },
+  "message": {
+    "text": "testing... 1.. 2.. 3..",
+    "html": "testing... 1.. 2.. 3.."
+  }
+}
+```

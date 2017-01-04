@@ -25,6 +25,12 @@ let user = {
 };
 
 module.exports = (Router) => {
+  /**
+   * Return the currently logged in user.
+   **/
+  Router.get('/me', (req, res) => {
+    return res.send(user);
+  })
 
   /**
    * Return the user by :id.
@@ -38,13 +44,6 @@ module.exports = (Router) => {
         "code":    "USERNOTFOUND"
       }
     })
-  })
-
-  /**
-   * Return the currently logged in user.
-   **/
-  Router.get('/me', (req, res) => {
-    return res.send(user);
   })
 
   /**

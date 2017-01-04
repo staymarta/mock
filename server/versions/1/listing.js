@@ -98,6 +98,30 @@ module.exports = (Router, paginate) => {
     })
   });
 
+  Router.put('/', (req, res) => {
+    return res.send({
+      "error": {
+        "message": "Listing ID not found",
+        "code":    "LISTNOTFOUND"
+      }
+    })
+  })
+
+  Router.put('/:id', (req, res) => {
+    if(req.params.id === listing.id) return res.send(listing = req.body);
+
+    return res.send({
+      "error": {
+        "message": "Listing ID not found",
+        "code": "LISTNOTFOUND"
+      }
+    })
+  })
+
+  Router.post('/', (req, res) => {
+    return res.send(listing)
+  })
+
   Router.get('/', (req, res) => {
     return res.paginate([
       listing,
