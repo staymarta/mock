@@ -2,7 +2,7 @@
 
 **v1**
 
-Written & maintained by [Jared Allard &lt;jaredallard@outlook.com&gt;](https://jaredallard.me)
+Written & maintained by [Jared Allard &lt;jared@staymarta.com&gt;](mailto:jared@staymarta.com)
 
 ## Authentication
 
