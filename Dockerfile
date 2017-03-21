@@ -3,7 +3,8 @@
 #
 FROM mhart/alpine-node:base
 EXPOSE 80
-CMD ["./service/init.sh"]
+ENTRYPOINT ["/usr/bin/dumb-init", "--"]
+CMD ["/SERVICE/service/init.sh"]
 WORKDIR /SERVICE
 
 ################################################################################
