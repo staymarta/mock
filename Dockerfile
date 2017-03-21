@@ -31,6 +31,9 @@ RUN apk add --no-cache curl && \
   ln -s /opt/yarn/bin/yarn /usr/local/bin && \
   apk del --purge curl
   
+# Install pm2
+RUN yarn global add pm2
+
 # Install the (new) modules.
 COPY package.json /SERVICE
 RUN cd /SERVICE; yarn
