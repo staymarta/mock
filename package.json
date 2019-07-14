@@ -5,7 +5,7 @@
   "dependencies": {
     "async": "^2.1.4",
     "body-parser": "^1.15.2",
-    "debug": "^2.5.1",
+    "debug": "^2.6.9",
     "express": "^4.14.0"
   }
 }
